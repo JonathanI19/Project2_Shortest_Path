@@ -1,6 +1,7 @@
 #copied from MAN1986/pyamaze
 from pyamaze import maze,agent,textLabel
 from queue import PriorityQueue
+import sys
 def h(cell1,cell2):
     x1,y1=cell1
     x2,y2=cell2
@@ -48,7 +49,7 @@ def aStar(m):
 
 if __name__=='__main__':
     m=maze(5,5)
-    m.CreateMaze()
+    m.CreateMaze(sys.argv[1])
     path=aStar(m)
 
     a=agent(m,footprints=True)
