@@ -1,4 +1,4 @@
-#STEPS
+# STEPS
 
 1) Incorporate ASTAR
     Import pyamaze library
