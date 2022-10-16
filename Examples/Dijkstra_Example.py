@@ -12,7 +12,7 @@ INPUT = "./example_input_1.txt"
 def main():
     parse = ParseFile(input_file = INPUT, output_file = OUTPUT)
     m = maze(rows = parse.rows, cols = parse.cols)
-    m.CreateMaze()
+    m.CreateMaze(loadMaze = OUTPUT)
     fwdPath, visited = dijkstra(m = m, start = None)
     print(fwdPath)
 
