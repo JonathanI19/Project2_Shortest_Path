@@ -1,4 +1,4 @@
-#credit goes to Man1986/pyamaze
+#copied from MAN1986/pyamaze
 from pyamaze import maze,agent,textLabel
 from queue import PriorityQueue
 def h(cell1,cell2):
