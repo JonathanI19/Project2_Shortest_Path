@@ -11,11 +11,11 @@ def main():
     print("Missing argument")
     return
 
-  INPUT = "./example_input_1.txt"
+  INPUT = sys.argv[2]
   OUTPUT = ".subprocess_output.txt"
   parse = ParseFile(input_file = INPUT, output_file = OUTPUT)
 
-  process = subprocess.run(['python', sys.argv[1], sys.argv[2]], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+  process = subprocess.run(['python', sys.argv[1], ".subprocess_output.txt", sys.argv[3]], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
   output = process.stdout.decode()
   key_value_list = output.replace('\r', '').split('\n')

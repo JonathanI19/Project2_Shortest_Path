@@ -49,7 +49,7 @@ def aStar(m):
 
 if __name__=='__main__':
     m=maze(5,5)
-    m.CreateMaze(sys.argv[1])
+    m.CreateMaze(loadMaze = sys.argv[1])
     path=aStar(m)
 
     a=agent(m,footprints=True)
@@ -59,4 +59,5 @@ if __name__=='__main__':
     for key in path:
         print(f"{key},{path[key]}")
 
-    m.run()
+    if (bool(sys.argv[2])):
+        m.run()
