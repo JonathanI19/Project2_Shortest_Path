@@ -1,11 +1,16 @@
 import sys
 import subprocess
+sys.path.append("../")
+from parser_script import ParseFile
 
 # print("Number of arguments:", len(sys.argv), 'arguments.')
 # print("Argument list:", str(sys.argv))
-
 if (len(sys.argv) > 1):
   algorithm = sys.argv[1]
+
+INPUT = "./example_input_1.txt"
+OUTPUT = ".subprocess_output.txt"
+parse = ParseFile(input_file = INPUT, output_file = OUTPUT)
 
 process = subprocess.run(['python', sys.argv[1]], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
