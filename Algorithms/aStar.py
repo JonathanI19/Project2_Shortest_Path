@@ -55,4 +55,7 @@ if __name__=='__main__':
     m.tracePath({a:path})
     l=textLabel(m,'A Star Path Length',len(path)+1)
 
+    for key in path:
+        print(f"{key},{path[key]}")
+
     m.run()
