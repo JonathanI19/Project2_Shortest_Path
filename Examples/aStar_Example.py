@@ -3,18 +3,19 @@
 from pyamaze import maze
 import sys
 sys.path.append("../")
-from Algorithms.dijkstra import dijkstra
+from Algorithms.aStar import aStar
 from parser_script import ParseFile
 
-OUTPUT = "./dijsktra_example_output.csv"
-INPUT = "./example_input_1.txt"
+OUTPUT = "./aStar_example_output.csv"
+INPUT = "./example_input_2.txt"
 
 def main():
-    parse = ParseFile(input_file = INPUT, output_file = OUTPUT)
+    parse = ParseFile(input_file = INPUT, output_file = OUTPUT, N=0, S=1, E=2, W=3)
     m = maze(rows = parse.rows, cols = parse.cols)
     m.CreateMaze(loadMaze = OUTPUT)
-    fwdPath, visited = dijkstra(m = m, start = None)
+    fwdPath= aStar(m = m, start = None)
     print(fwdPath)
+
     if len(sys.argv) > 1:
         if sys.argv[1] == "True":    
             m.run()
