@@ -24,7 +24,8 @@ def main():
     m = maze(rows = parse.rows, cols = parse.cols)
     
     # Loading maze based on normalized output csv
-    # set x and y variables in CreateMaze to change goal; Default is 1,1
+    # You can change goal location by following the format shown below:
+    # m.CreateMaze(loadMaze = OUTPUT, x=1, y=1)
     m.CreateMaze(loadMaze = OUTPUT)
     
     # Using aStar to create fwdPath dictionary, which is used to find path from start to goal.
