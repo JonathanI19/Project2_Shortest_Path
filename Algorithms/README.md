@@ -1,5 +1,6 @@
-All code for these algorithms found within this folder are the work of PyAmaze.
+# Attributions
 
-Originals can be found at the following link:
+Code based on PyAmaze Algorithms.
 
+Originals can be found here:
 https://github.com/MAN1986/pyamaze
