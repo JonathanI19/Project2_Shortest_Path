@@ -38,8 +38,8 @@ class MazeSolver:
         # Accepts maze object and starting cell as parameters
         self.path = aStar(m = self.m, start = (self.start_row, self.start_col))
 
-        # Printing out solution
-        print(self.path)
+        # Returning solution
+        return(self.path)
 
     # This method will display an animated GUI of the maze being solved
     def displayGUI(self):
