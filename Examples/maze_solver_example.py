@@ -1,11 +1,12 @@
 #!/usr/bin/env/ python3
+
 import sys
 sys.path.append("../")
 from maze_solver_script import MazeSolver
 from parser_script import ParseFile
 
 # Names for Output csv and Input csv
-OUTPUT = "./aStar_example_output.csv"
+OUTPUT = "./_example_output_2.csv"
 INPUT = "./example_input_2.txt"
 
 # Main Function

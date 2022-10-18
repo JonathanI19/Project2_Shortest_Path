@@ -12,17 +12,31 @@ class ParseFile:
         self.parsed_lines = []
         self.cols = 0
         self.rows = 0
+
+        # Calling parse_lines() method
         self.parse_lines()
+
+        # Calling get_dim() method
         self.get_dim()
+
+        # Initialzing 3d matrix
         self.arr = [[[0 for x in range(4)] for y in range(self.cols)] for z in range(self.rows)]
+
+        # Calling computer_arr() method
         self.compute_arr()
+
+        # Calling write_csv() method
         self.write_csv()
 
     # Cleaning up lines for easier processing
     def parse_lines(self):
+        
+        # Looping through lines and removing extraneous characters
         for line in self.lines:
             temp = line.replace('"', '').replace(')', '').replace('(', '').replace(',',' ')
             temp = temp.split()
+
+            # Appending parsed lines without extraneous characters
             self.parsed_lines.append(temp)
         return
     
@@ -49,8 +63,14 @@ class ParseFile:
 
     #Writing to new csv with proper formatting for loading into pyamaze maze generation
     def write_csv(self):
+
+        # Opening output file with write permissions
         output = open(self.output_file, "w")
+
+        # Writing first line of csv
         output.write("  cell  ,E,W,N,S")
+
+        # Incrementing through each line and data point
         for j in range(self.cols):
             for i in range(self.rows):
                 
