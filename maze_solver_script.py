@@ -45,7 +45,7 @@ class MazeSolver:
     def displayGUI(self):
 
         # Generates an agent that shows self.path being applied to the maze
-        a = agent(self.m, x = self.start_row, y = self.start_col, goal = (self.goal_row, self.goal_col), footprints = True, color = COLOR.red)
+        a = agent(self.m, x=self.start_row, y=self.start_col, goal=(self.goal_row, self.goal_col), footprints=True, color=COLOR.blue, shape='square', filled=True)
         
         # Specifies parameters for how the agent (a) will animate
         self.m.tracePath({a:self.path}, delay=300)

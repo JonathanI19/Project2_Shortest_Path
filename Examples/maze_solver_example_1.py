@@ -6,16 +6,15 @@ from maze_solver_script import MazeSolver
 from parser_script import ParseFile
 
 # Names for Output csv and Input csv
-OUTPUT = "./_example_output_2.csv"
-INPUT = "./example_input_2.txt"
+OUTPUT = "./_example_output_1.csv"
+INPUT = "./example_input_1.txt"
 
 # Main Function
 def main():
 
     # Creating ParseFile object.
-    # Input csv is out of order, so N, S, E, W is used to specify the order that they are passed in.
     # Output csv will be normalized to EWNS, provided proper input order is declared.
-    parse = ParseFile(input_file = INPUT, output_file = OUTPUT, N=0, S=1, E=2, W=3)
+    parse = ParseFile(input_file = INPUT, output_file = OUTPUT)
 
     # Creating MazeSolver object.
     # goal_row and goal_col point to the cell we want to reach; defaults to upper left of maze
