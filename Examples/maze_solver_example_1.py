@@ -25,6 +25,8 @@ def main():
 
     # Solves the maze generated above and outputs a dictionary with path instructions
     path = solve.generatePath()
+
+    # Printing path
     print(path)
 
     # This method can be called to display a GUI showing the path the maze is solved in
