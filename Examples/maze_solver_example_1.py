@@ -24,7 +24,8 @@ def main():
     solve = MazeSolver(goal_row = 2, goal_col = 1, start_row = 4, start_col = 4, input_csv = OUTPUT)
 
     # Solves the maze generated above and outputs a dictionary with path instructions
-    solve.generatePath()
+    path = solve.generatePath()
+    print(path)
 
     # This method can be called to display a GUI showing the path the maze is solved in
     # This method can be commented out if you only wish to receive the dictionary with the path information
