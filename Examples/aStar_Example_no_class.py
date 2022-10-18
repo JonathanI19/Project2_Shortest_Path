@@ -43,7 +43,7 @@ def main():
         goal_row = 1
     if goal_col is None:
         goal_col = 1
-    m.CreateMaze(loadMaze = OUTPUT, x = goal_row, y = goal_col, loopPercent=100)
+    m.CreateMaze(loadMaze = OUTPUT, x = goal_row, y = goal_col)
     
     # Using aStar to create fwdPath dictionary, which is used to find path from start to goal.
     start_x, start_y = START_COL,START_ROW
