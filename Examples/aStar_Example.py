@@ -11,8 +11,18 @@ from parser_script import ParseFile
 # Names for Output csv and Input csv
 OUTPUT = "./aStar_example_output.csv"
 INPUT = "./example_input_2.txt"
-# GOAL is defined in agent
-# START is defined in agent
+
+# GOAL is location of goal cell
+# Default is normally upper left corner (1,1)
+GOAL_ROW = 2
+GOAL_COL = None
+
+# STARTx and STARTy are used to specify the starting location of the maze
+# When set to None, they default to the respective end col or end row
+START_ROW = 4
+START_COL = None
+
+
 # Highlighted Green is defined in createmaze
 
 # Main function
@@ -27,19 +37,37 @@ def main():
     m = maze(rows = parse.rows, cols = parse.cols)
     
     # Loading maze based on normalized output csv
-    # You can change goal location by following the format shown below:
-    # m.CreateMaze(loadMaze = OUTPUT, x=1, y=1)
-    m.CreateMaze(loadMaze = OUTPUT)
+    # x and y are taken from goal and used to show the appropriate cell
+    goal_col,goal_row = GOAL_COL, GOAL_ROW
+    if goal_row is None:
+        goal_row = 1
+    if goal_col is None:
+        goal_col = 1
+    m.CreateMaze(loadMaze = OUTPUT, x = goal_row, y = goal_col, loopPercent=100)
     
     # Using aStar to create fwdPath dictionary, which is used to find path from start to goal.
-    fwdPath= aStar(m = m, start = None)
+    start_x, start_y = START_COL,START_ROW
+    if start_x is None:
+        start_x = parse.cols
+    if start_y is None:
+        start_y = parse.rows
+    fwdPath= aStar(m = m, start = (start_y,start_x))
     
     # Print out fwdPath dictionary
     print(fwdPath)
-    a = agent(m, footprints=True, color=COLOR.blue, filled=True, goal=(2,2))
+
+    # Creating agent object
+    # This is what draws the path and allows us to specify the start and end location
+    _goal = (goal_row, goal_col)
+    print(_goal)
+    a = agent(m, x=START_ROW, y=START_COL, goal=_goal, footprints=True, color=COLOR.blue, filled=True)
+    #a = agent(m,)
+    # Tells the maze to trace the path when the gui is displayed
     m.tracePath({a:fwdPath}, delay=300)
+
+    # Displays the gui if the user passes in [display] (case insensitive) after calling the program
     if len(sys.argv) > 1:
-        if sys.argv[1] == "True":    
+        if sys.argv[1].casefold() == "display":    
             m.run()
 
 if __name__ == '__main__':

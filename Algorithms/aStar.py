@@ -13,14 +13,14 @@ def aStar(m,start=None):
     g_score={cell:float('inf') for cell in m.grid}
     g_score[start]=0
     f_score={cell:float('inf') for cell in m.grid}
-    f_score[start]=h(start,(1,1))
+    f_score[start]=h(start,m._goal)
 
     open=PriorityQueue()
-    open.put((h(start,(1,1)),h(start,(1,1)),start))
+    open.put((h(start,m._goal),h(start,m._goal),start))
     aPath={}
     while not open.empty():
         currCell=open.get()[2]
-        if currCell==(1,1):
+        if currCell==m._goal:
             break
         for d in 'ESNW':
             if m.maze_map[currCell][d]==True:
@@ -34,15 +34,15 @@ def aStar(m,start=None):
                     childCell=(currCell[0]+1,currCell[1])
 
                 temp_g_score=g_score[currCell]+1
-                temp_f_score=temp_g_score+h(childCell,(1,1))
+                temp_f_score=temp_g_score+h(childCell,m._goal)
 
                 if temp_f_score < f_score[childCell]:
                     g_score[childCell]= temp_g_score
-                    f_score[childCell]= temp_f_score
-                    open.put((temp_f_score,h(childCell,(1,1)),childCell))
+                    f_score[childCell]= temp_g_score + h(childCell, m._goal)
+                    open.put((temp_f_score,h(childCell,m._goal),childCell))
                     aPath[childCell]=currCell
     fwdPath={}
-    cell=(1,1)
+    cell=m._goal
     while cell!=start:
         fwdPath[aPath[cell]]=cell
         cell=aPath[cell]
@@ -50,7 +50,8 @@ def aStar(m,start=None):
 
 if __name__=='__main__':
     m=maze(5,5)
-    m.CreateMaze(loadMaze = sys.argv[1])
+    #m.CreateMaze(loadMaze = sys.argv[1])
+    m.CreateMaze()
     path=aStar(m)
 
     a=agent(m,footprints=True)
@@ -60,5 +61,6 @@ if __name__=='__main__':
     for key in path:
         print(f"{key},{path[key]}")
 
-    if (bool(sys.argv[2])):
-        m.run()
+    #if (bool(sys.argv[2])):
+    #    m.run()
+    m.run()
