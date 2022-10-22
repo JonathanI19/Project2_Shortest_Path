@@ -18,11 +18,12 @@ This repo is an advancement on the previous Maze Generation repo. A new function
 
 maze_solver_script.py Info
 ------
-This python script utilizes a class to parse the inputs goal row, goal column, start row, start column, and finally the input file. It outputs the shortest path to the command line. The default values for the goal row and coloumns are 1. Comment out line 31 if you wish to disable the GUI.
+This python script utilizes a class to parse the inputs goal row, goal column, start row, start column, and finally the input file. It outputs the shortest path to the command line. The default values for the goal row and coloumns are 1.
 
 Example 1 Usage – maze_solver_example_1.py
 ------
-This example is very similar to example 1. Comment out line 35 if you do not wish to see the GUI.
+In maze_solver_example_1.py, the input csv file is given in (and must be) the proper order of EWNS. The output csv will also be EWNS if the input csv file was correct. Comment out line 31 if you wish to disable the GUI.
+
 ```
 python3 maze_solver_example_1.py
 ```
@@ -35,6 +36,7 @@ python3 maze_solver_example_1.py
 
 Example 2  Usage - maze_solver_example_2.py
 ------
+This example is similar to example 1, except the input csv is out of order. N, S, E, W is used to specify the order that they are passed in. The output csv will be normalized to EWNS, provided proper input order is declared. Comment out line 35 if you do not wish to see the GUI.
 ```
 python3 maze_solver_example_2.py
 ```
