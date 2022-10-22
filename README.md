@@ -1,12 +1,13 @@
 Requirements
 ======
 Install Pyamaze
-'''
+```
 git clone https://github.com/MAN1986/pyamaze.git ./
 pip3 install pyamaze
-'''
+```
 Clone this repo
-
+```
+```
 
 Basic Information
 ======
