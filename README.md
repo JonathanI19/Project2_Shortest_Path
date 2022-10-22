@@ -27,7 +27,7 @@ In maze_solver_example_1.py, the input csv file is given in (and must be) the pr
 ```
 python maze_solver_example_1.py
 ```
-
+* *if that command doesn't work, replace python with python3*
 ## Imports and Globals
 
 
@@ -40,6 +40,7 @@ This example is similar to example 1, except the input csv is out of order. N, S
 ```
 python maze_solver_example_2.py
 ```
+* *if that command doesn't work, replace python with python3*
 
 ## Imports and Globals
 
