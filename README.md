@@ -22,7 +22,7 @@ This python script utilizes a class to parse the inputs goal row, goal column, s
 
 Examples
 ------
-For the mains in both examples, if no input csv is specified, a random 10x10 maze will be generated. The default starting point is the bottom right corner. The default goal is the upper left corner.
+The example codes are found in the Examples Folder. For the mains in both examples, if no input csv is specified, a random 10x10 maze will be generated. The default starting point is the bottom right corner. The default goal is the upper left corner.
 
 ## Example 1 Usage – maze_solver_example_1.py
 In maze_solver_example_1.py, the input csv file is given in (and must be) the proper order of EWNS. The output csv will also be EWNS if the input csv file was correct. Comment out line 34 if you wish to disable the GUI.
