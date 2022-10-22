@@ -18,7 +18,7 @@ This repo is an advancement on the previous Maze Generation repo. A new class, M
 
 maze_solver_script.py Info
 ------
-This python script utilizes a class to parse the inputs goal row, goal column, start row, start column, and finally the input file. It outputs the shortest path to the command line. The default values for the goal row and coloumns are 1.
+This python script utilizes a class to parse the inputs goal row, goal column, start row, start column, and finally the input file. It requires the maze, agent, and COLOR classes from the pyamaze package. It outputs the shortest path to the command line. The default values for the goal row and columns are 1.
 
 Examples
 ------
