@@ -28,12 +28,15 @@ In maze_solver_example_1.py, the input csv file is given in (and must be) the pr
 python maze_solver_example_1.py
 ```
 * *if that command doesn't work, replace python with python3*
-## Imports and Globals
+
+Here is the output for this example if the GUI is enabled:
+![GUI DIsplay](https://media.giphy.com/media/EGLTGdAqBSuICKPGKl/giphy.gif)
+
 
 
 ## Main Function
 
-![GUI DIsplay](https://media.giphy.com/media/OHGjlPLvqeC4DzyFUa/giphy.gif)
+
 
 Example 2  Usage - maze_solver_example_2.py
 ------
@@ -43,7 +46,9 @@ python maze_solver_example_2.py
 ```
 * *if that command doesn't work, replace python with python3*
 
-## Imports and Globals
+Here is the output for this example if the GUI is enabled:
+![GUI DIsplay](https://media.giphy.com/media/OHGjlPLvqeC4DzyFUa/giphy.gif)
+
 
 
 ## Main Function
