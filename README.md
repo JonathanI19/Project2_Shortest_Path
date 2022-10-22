@@ -30,6 +30,7 @@ python maze_solver_example_1.py
 * *if that command doesn't work, replace python with python3*
 
 Here is the output for this example if the GUI is enabled:
+
 ![GUI DIsplay](https://media.giphy.com/media/EGLTGdAqBSuICKPGKl/giphy.gif)
 
 
@@ -47,6 +48,7 @@ python maze_solver_example_2.py
 * *if that command doesn't work, replace python with python3*
 
 Here is the output for this example if the GUI is enabled:
+
 ![GUI DIsplay](https://media.giphy.com/media/OHGjlPLvqeC4DzyFUa/giphy.gif)
 
 
