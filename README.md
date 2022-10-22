@@ -2,35 +2,35 @@ Project2_Shortest_Path ECE 3432
 ======
 Requirements
 ------
-Install Pyamaze
+**Install Pyamaze using PIP**
 ```
-git clone https://github.com/MAN1986/pyamaze.git ./
 pip3 install pyamaze
 ```
-Clone this repository
+* *see the [Pyamaze GitHub repository](https://github.com/MAN1986/pyamaze) if you want to install it without a package manager*
+
+**Clone this repository to your working directory**
 ```
-git clone https://github.com/JonathanI19/Project2_Shortest_Path.git ./
+git clone https://github.com/JonathanI19/Project2_Shortest_Path.git
 ```
 
 Basic Information
 ------
-This repo is an advancement on the previous Maze Generation repo. A new class, MazeSolver, is incorporated to find the shortest path from a given start location and a goal location. The user can choose to display a GUI or not by commenting out a line in the example file. Regardless, the code will print the shortest path using the AStar algorithm  to the command line. Two example codes are provided to the user. 
+This repo is an advancement of the [Maze Generation repo](https://github.com/JonathanI19/Project1_Maze_Generation). A new class, MazeSolver, is added to find the shortest path from a given start location and a goal location. The user can choose to display a GUI or not by commenting out a line in the example file. Regardless, the code will print the shortest path using the AStar algorithm  to the command line. Two example codes are provided to the user. 
 
-maze_solver_script.py Info
-------
-This python script utilizes a class to parse the inputs goal row, goal column, start row, start column, and finally the input file. It outputs the shortest path to the command line. The default values for the goal row and coloumns are 1.
+# maze_solver_script.py Info
+This python script utilizes a class to parse the inputs goal row, goal column, start row, start column, and finally the input file. It outputs the shortest path to the command line. The default values for the goal row and columns are 1.
 
 Examples
 ------
-For the mains in both examples, if no input csv is specified, a random 10x10 maze will be generated. The default starting point is the bottom right corner. The default goal is the upper left corner.
+For the main functions in both examples, if no input csv is specified, a random 10x10 maze will be generated. The default starting point is the bottom right corner. The default goal is the upper left corner.
 
 ## Example 1 Usage – maze_solver_example_1.py
-In maze_solver_example_1.py, the input csv file is given in (and must be) the proper order of EWNS. The output csv will also be EWNS if the input csv file was correct. Comment out line 34 if you wish to disable the GUI.
+In maze_solver_example_1.py, the input csv file is given in (and must be) the proper order of East-West-North-South. The output csv will also be East-West-North-South if the input csv file was correct. Comment out line 34 if you wish to disable the GUI.
 
 ```
 python maze_solver_example_1.py
 ```
-* *if that command doesn't work, replace python with python3*
+* *python command may very depending on your version. if that command doesn't work, replace python with python3. otherwise, check if Python is added to your system PATH*
 
 Here is the output for this example if the GUI is enabled:
 
@@ -45,7 +45,7 @@ This example is similar to example 1, except the input csv is out of order. N, S
 ```
 python maze_solver_example_2.py
 ```
-* *if that command doesn't work, replace python with python3*
+* *python command may very depending on your version. if that command doesn't work, replace python with python3. otherwise, check if Python is added to your system PATH*
 
 Here is the output for this example if the GUI is enabled:
 
