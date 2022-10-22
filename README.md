@@ -27,6 +27,7 @@ The example codes are found in the Examples Folder. For the mains in both exampl
 ## Example 1 Usage – maze_solver_example_1.py
 In maze_solver_example_1.py, the input csv file is given in (and must be) the proper order of EWNS. The output csv will also be EWNS if the input csv file was correct. Comment out line 34 if you wish to disable the GUI.
 
+Command to run example 1 (make sure you are in the Examples directory):
 ```
 python maze_solver_example_1.py
 ```
@@ -41,7 +42,9 @@ Here is the displayed output path:
 {(2, 2): (2, 1), (1, 2): (2, 2), (1, 3): (1, 2), (2, 3): (1, 3), (2, 4): (2, 3), (3, 4): (2, 4), (4, 4): (3, 4)}
 ```
 ## Example 2  Usage - maze_solver_example_2.py
-This example is similar to example 1, except the input csv is out of order. N, S, E, W is used to specify the order that they are passed in. The output csv will be normalized to EWNS, provided proper input order is declared. Comment out line 35 if you do not wish to see the GUI.
+This example is similar to example 1, except the input csv is out of order. N, S, E, W is used to specify the order that they are passed in. The output csv will be normalized to EWNS, provided proper input order is declared. Comment out line 35 if you do not wish to see the GUI. 
+
+Command to run example 2 (make sure you are in the Examples directory):
 ```
 python maze_solver_example_2.py
 ```
