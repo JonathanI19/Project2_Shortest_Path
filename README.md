@@ -36,6 +36,10 @@ Here is the output for this example if the GUI is enabled:
 
 ![GUI DIsplay](https://media.giphy.com/media/EGLTGdAqBSuICKPGKl/giphy.gif)
 
+Here is the displayed output path:
+```
+{(2, 2): (2, 1), (1, 2): (2, 2), (1, 3): (1, 2), (2, 3): (1, 3), (2, 4): (2, 3), (3, 4): (2, 4), (4, 4): (3, 4)}
+```
 ## Example 2  Usage - maze_solver_example_2.py
 This example is similar to example 1, except the input csv is out of order. N, S, E, W is used to specify the order that they are passed in. The output csv will be normalized to EWNS, provided proper input order is declared. Comment out line 35 if you do not wish to see the GUI.
 ```
@@ -47,5 +51,7 @@ Here is the output for this example if the GUI is enabled:
 
 ![GUI DIsplay](https://media.giphy.com/media/OHGjlPLvqeC4DzyFUa/giphy.gif)
 
-
-
+Here is the displayed output path:
+```
+{(5, 4): (5, 5), (5, 3): (5, 4), (4, 3): (5, 3), (3, 3): (4, 3), (3, 2): (3, 3), (2, 2): (3, 2), (1, 2): (2, 2), (1, 1): (1, 2)}
+```
