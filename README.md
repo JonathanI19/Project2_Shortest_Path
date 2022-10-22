@@ -33,7 +33,7 @@ python maze_solver_example_1.py
 
 ## Main Function
 
-![](https://github.com/JonathanI19/Project2_Shortest_Path/example1_GUI.gif)
+![GUI DIsplay](https://github.com/JonathanI19/Project2_Shortest_Path/example1_GUI.gif)
 
 Example 2  Usage - maze_solver_example_2.py
 ------
