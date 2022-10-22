@@ -18,9 +18,13 @@ This repo is an advancement on the previous Maze Generation repo. A new function
 
 maze_solver_script.py Info
 ------
+This python script utilizes a class to parse the inputs goal row, goal column, start row, start column, and finally the input file. It outputs the shortest path to the command line. The default values for the goal row and coloumns are 1.
 
 Example 1 Usage – maze_solver_example_1.py
 ------
+```
+python3 maze_solver_example_1.py
+```
 
 ## Imports and Globals
 
@@ -30,6 +34,9 @@ Example 1 Usage – maze_solver_example_1.py
 
 Example 2  Usage - maze_solver_example_2.py
 ------
+```
+python3 maze_solver_example_2.py
+```
 
 ## Imports and Globals
 
